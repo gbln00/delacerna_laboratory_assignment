@@ -37,7 +37,23 @@
                         </div>
                         <x-input-error :messages="$errors->get('name')" class="mt-2 text-red-400 text-xs" />
                     </div>
-
+                    <!-- Username -->
+                    <div>
+                        <x-input-label for="username" :value="__('Username')" class="text-gray-300 text-sm font-medium mb-1 block" />
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">   
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                            </div>
+                            <x-text-input id="username"
+                                class="block w-full pl-10 pr-4 py-3 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent placeholder-gray-400 transition duration-200"
+                                type="text" name="username" :value="old('username')"
+                                placeholder="johndoe"
+                                required autocomplete="username" />
+                        </div>
+                        <x-input-error :messages="$errors->get('username')" class="mt-2 text-red-400 text-xs" />
+                    </div>  
                     <!-- Email Address -->
                     <div>
                         <x-input-label for="email" :value="__('Email Address')" class="text-gray-300 text-sm font-medium mb-1 block" />
